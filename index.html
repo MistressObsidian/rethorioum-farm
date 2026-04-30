@@ -165,6 +165,96 @@
   .service-card h3 { font-size: 1.05rem; font-weight: 500; color: var(--green-deep); margin-bottom: 0.4rem; }
   .service-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; font-weight: 300; }
 
+  /* GALLERY */
+  .gallery-shell {
+    margin-top: 2.2rem;
+    background: white;
+    border: 1px solid rgba(76,175,80,0.18);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(26,61,31,0.08);
+  }
+  .gallery-stage {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #0f1b10;
+  }
+  .gallery-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .gallery-empty {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.75);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  .gallery-caption {
+    padding: 0.95rem 1rem;
+    border-top: 1px solid rgba(76,175,80,0.12);
+    color: var(--text-mid);
+    font-size: 0.9rem;
+    min-height: 3.1rem;
+  }
+  .gallery-controls {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    pointer-events: none;
+  }
+  .gallery-btn {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    color: var(--green-deep);
+    font-size: 1.2rem;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .gallery-btn:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+  }
+  .gallery-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.85rem 1rem 1rem;
+  }
+  .gallery-count {
+    color: var(--text-light);
+    font-size: 0.86rem;
+  }
+  .gallery-dotwrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .gallery-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 0;
+    background: rgba(45,106,53,0.25);
+    cursor: pointer;
+  }
+  .gallery-dot.active { background: var(--green-mid); }
+
   /* CONTACT */
   .contact-section { background: var(--green-pale); padding: 6rem 2rem; }
   .contact-inner { max-width: 680px; margin: 0 auto; text-align: center; }
@@ -317,6 +407,7 @@
     nav { padding: 1rem 1.25rem; }
     .nav-links { display: none; }
     .whatsapp-float { right: 1rem; bottom: 1rem; width: 56px; height: 56px; }
+    .gallery-btn { width: 38px; height: 38px; }
   }
 </style>
 </head>
@@ -333,6 +424,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
     <a href="#contact" class="nav-cta">Order Now</a>
@@ -501,6 +593,27 @@
   </div>
 </section>
 
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <span class="section-tag">Farm Moments</span>
+  <h2 class="section-title">Gallery Slideshow</h2>
+  <p class="section-body">Upload your photos and videos to the gallery folders, add their paths in one file, and they will rotate here automatically.</p>
+  <div class="gallery-shell">
+    <div class="gallery-stage" id="galleryStage">
+      <div class="gallery-empty">Add media files to the gallery list to start the slideshow.</div>
+      <div class="gallery-controls" id="galleryControls" style="display:none;">
+        <button class="gallery-btn" id="galleryPrev" aria-label="Previous slide">&#10094;</button>
+        <button class="gallery-btn" id="galleryNext" aria-label="Next slide">&#10095;</button>
+      </div>
+    </div>
+    <div class="gallery-caption" id="galleryCaption">No gallery media loaded yet.</div>
+    <div class="gallery-meta">
+      <div class="gallery-count" id="galleryCount">0 / 0</div>
+      <div class="gallery-dotwrap" id="galleryDots"></div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
@@ -564,11 +677,115 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#products">Products</a>
+    <a href="#gallery">Gallery</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </div>
   <div class="footer-copy">© 2024 Rethorium Farm. All rights reserved. Grown with love, delivered with care.</div>
 </footer>
+
+<script src="gallery/media-data.js"></script>
+<script>
+  (function () {
+    const mediaList = Array.isArray(window.galleryMedia) ? window.galleryMedia : [];
+    const stage = document.getElementById('galleryStage');
+    const captionEl = document.getElementById('galleryCaption');
+    const countEl = document.getElementById('galleryCount');
+    const dotsWrap = document.getElementById('galleryDots');
+    const controls = document.getElementById('galleryControls');
+    const prevBtn = document.getElementById('galleryPrev');
+    const nextBtn = document.getElementById('galleryNext');
+    let currentIndex = 0;
+    let autoTimer = null;
+
+    function isVideo(path) {
+      return /\.(mp4|webm|ogg)$/i.test(path);
+    }
+
+    function clearStage() {
+      stage.innerHTML = '';
+      stage.appendChild(controls);
+    }
+
+    function renderDots() {
+      dotsWrap.innerHTML = '';
+      mediaList.forEach(function (_, index) {
+        const dot = document.createElement('button');
+        dot.className = 'gallery-dot' + (index === currentIndex ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+        dot.addEventListener('click', function () {
+          currentIndex = index;
+          renderSlide();
+          restartAutoPlay();
+        });
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function renderSlide() {
+      if (!mediaList.length) {
+        return;
+      }
+
+      const item = mediaList[currentIndex];
+      clearStage();
+
+      if (isVideo(item.src)) {
+        const video = document.createElement('video');
+        video.className = 'gallery-media';
+        video.src = item.src;
+        video.controls = true;
+        video.muted = true;
+        video.preload = 'metadata';
+        stage.insertBefore(video, controls);
+      } else {
+        const image = document.createElement('img');
+        image.className = 'gallery-media';
+        image.src = item.src;
+        image.alt = item.caption || 'Farm gallery image';
+        stage.insertBefore(image, controls);
+      }
+
+      captionEl.textContent = item.caption || 'Farm gallery media';
+      countEl.textContent = (currentIndex + 1) + ' / ' + mediaList.length;
+      renderDots();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % mediaList.length;
+      renderSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + mediaList.length) % mediaList.length;
+      renderSlide();
+    }
+
+    function restartAutoPlay() {
+      if (autoTimer) {
+        clearInterval(autoTimer);
+      }
+      autoTimer = setInterval(nextSlide, 5000);
+    }
+
+    if (!mediaList.length) {
+      return;
+    }
+
+    controls.style.display = 'flex';
+    prevBtn.addEventListener('click', function () {
+      prevSlide();
+      restartAutoPlay();
+    });
+    nextBtn.addEventListener('click', function () {
+      nextSlide();
+      restartAutoPlay();
+    });
+
+    renderSlide();
+    restartAutoPlay();
+  }());
+</script>
 
 </body>
 </html>
