@@ -4,34 +4,6 @@ window.galleryMedia = [
     caption: 'Fresh harvest from the field at Rethorium Farm.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-2.jpeg',
-    caption: 'Fresh harvest from the field at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-3.jpeg',
-    caption: 'Team activity during harvest operations.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-4.jpeg',
-    caption: 'Field preparation and harvest work at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-5.jpeg',
-    caption: 'Careful harvesting in progress on the farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-6.jpeg',
-    caption: 'Harvest work captured during field operations.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-7.jpeg',
-    caption: 'Team activity during harvest operations.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-8.jpeg',
-    caption: 'Fresh produce harvested from the farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-9.jpeg',
     caption: 'Packed harvest ready for supply and delivery.'
   },
