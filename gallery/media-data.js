@@ -24,32 +24,16 @@ window.galleryMedia = [
     caption: 'Harvest work underway at Rethorium Farm.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-14.jpeg',
-    caption: 'Field inspection and fresh harvest at Rethorium Farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-15.jpeg',
     caption: 'Fresh harvest and farm activity at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-16.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
   },
   {
     src: 'gallery/images/harvest-2026-04/harvest-17.jpeg',
     caption: 'Recent harvest and field activity at Rethorium Farm.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-18.jpeg',
-    caption: 'Harvest teamwork at Rethorium Farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-19.jpeg',
     caption: 'Field inspection and crop activity at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-20.jpeg',
-    caption: 'Hands-on harvesting in progress at Rethorium Farm.'
   },
   {
     src: 'gallery/images/harvest-2026-04/harvest-21.jpeg',
@@ -60,10 +44,6 @@ window.galleryMedia = [
     caption: 'Farm team activity during harvest operations.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-23.jpeg',
-    caption: 'Fresh roots harvested at Rethorium Farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-24.jpeg',
     caption: 'Bulk harvest ready for transport and supply.'
   },
@@ -72,15 +52,7 @@ window.galleryMedia = [
     caption: 'Fresh roots harvested at Rethorium Farm.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-31.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-32.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-33.jpeg',
     caption: 'Recent harvest and field activity at Rethorium Farm.'
   },
   {
