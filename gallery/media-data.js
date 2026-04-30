@@ -112,18 +112,6 @@ window.galleryMedia = [
     caption: 'Recent harvest and field activity at Rethorium Farm.'
   },
   {
-    src: 'gallery/images/harvest-2026-04/harvest-36.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-37.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
-  },
-  {
-    src: 'gallery/images/harvest-2026-04/harvest-38.jpeg',
-    caption: 'Recent harvest and field activity at Rethorium Farm.'
-  },
-  {
     src: 'gallery/images/harvest-2026-04/harvest-39.jpeg',
     caption: 'Recent harvest and field activity at Rethorium Farm.'
   }
