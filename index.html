@@ -58,12 +58,12 @@
   }
   .nav-logo { display: flex; align-items: center; gap: 10px; }
   .nav-logo-icon {
-    width: 38px; height: 38px; background: var(--green-mid);
+    width: 58px; height: 58px; background: var(--green-mid);
     border-radius: 50%; display: flex; align-items: center; justify-content: center;
     overflow: hidden;
   }
   .nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--green-deep); letter-spacing: 0.03em; }
+  .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; color: var(--green-deep); letter-spacing: 0.03em; }
   .nav-links { display: flex; align-items: center; gap: 2rem; }
   .nav-links a { font-size: 0.9rem; color: var(--text-mid); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
   .nav-links a:hover { color: var(--green-bright); }
@@ -135,8 +135,8 @@
 
   /* ABOUT */
   .section { padding: 0.4rem 2rem; max-width: 1100px; margin: 0 auto; }
-  .section-tag { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-bright); font-weight: 500; margin-bottom: 0.75rem; display: block; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--green-deep); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+  .section-tag { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-bright); font-weight: 600; margin-bottom: 0.75rem; display: block; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2.35rem, 4vw, 3.5rem); color: var(--green-deep); font-weight: 700; line-height: 1.15; margin-bottom: 1.5rem; }
   .section-body { font-size: 1rem; color: var(--text-mid); line-height: 1.8; font-weight: 300; max-width: 600px; }
 
   .about-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: start; }
@@ -423,6 +423,8 @@
     .contact-layout { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     nav { padding: 1rem 1.25rem; }
+    .nav-logo-icon { width: 48px; height: 48px; }
+    .nav-brand { font-size: 1.15rem; }
     .nav-links { display: none; }
     .whatsapp-float { right: 1rem; bottom: 1rem; width: 56px; height: 56px; }
     .gallery-btn { width: 38px; height: 38px; }
@@ -532,7 +534,7 @@
 <!-- GALLERY -->
 <section class="section" id="gallery">
   <span class="section-tag">Farm Moments</span>
-  <h2 class="section-title">Gallery Slideshow</h2>
+  <h2 class="section-title">Gallery </h2>
   <p class="section-body">Upload your photos and videos to the gallery folders, add their paths in one file, and they will rotate here automatically.</p>
   <div class="gallery-shell">
     <div class="gallery-stage" id="galleryStage">
