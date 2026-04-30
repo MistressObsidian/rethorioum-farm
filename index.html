@@ -134,22 +134,19 @@
   .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.06em; }
 
   /* ABOUT */
-  .section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
+  .section { padding: 0.4rem 2rem; max-width: 1100px; margin: 0 auto; }
   .section-tag { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green-bright); font-weight: 500; margin-bottom: 0.75rem; display: block; }
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--green-deep); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
   .section-body { font-size: 1rem; color: var(--text-mid); line-height: 1.8; font-weight: 300; max-width: 600px; }
 
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-  .about-img-wrap {
-    position: relative; border-radius: 24px; overflow: hidden;
-    background: var(--green-pale); aspect-ratio: 4/3;
-    display: flex; align-items: center; justify-content: center;
-    border: 1px solid rgba(76,175,80,0.2);
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: start; }
+  #about .section-body,
+  #about .about-points {
+    max-width: none;
   }
-  .farm-illustration { width: 100%; padding: 2rem; }
 
   /* PRODUCTS */
-  .products-section { background: var(--green-deep); padding: 6rem 2rem; }
+  .products-section { background: var(--green-deep); padding: 0.4rem 2rem; }
   .products-inner { max-width: 1100px; margin: 0 auto; }
   .products-section .section-tag { color: var(--gold); }
   .products-section .section-title { color: white; }
@@ -253,14 +250,10 @@
   }
   .gallery-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     gap: 0.8rem;
     padding: 0.85rem 1rem 1rem;
-  }
-  .gallery-count {
-    color: var(--text-light);
-    font-size: 0.86rem;
   }
   .gallery-dotwrap {
     display: flex;
@@ -277,9 +270,11 @@
     cursor: pointer;
   }
   .gallery-dot.active { background: var(--green-mid); }
+  #gallery { padding-bottom: 0.4rem; }
+  #services { padding-top: 0.4rem; }
 
   /* CONTACT */
-  .contact-section { background: var(--green-pale); padding: 6rem 2rem; }
+  .contact-section { background: var(--green-pale); padding: 0.4rem 2rem; }
   .contact-inner { max-width: 680px; margin: 0 auto; text-align: center; }
   .contact-inner .section-title { color: var(--green-deep); }
   .contact-inner p { color: var(--text-mid); margin-bottom: 2.5rem; font-size: 1rem; font-weight: 300; line-height: 1.7; }
@@ -302,8 +297,8 @@
   }
   .contact-layout {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     text-align: left;
     align-items: start;
   }
@@ -534,48 +529,58 @@
   <div class="stat-item"><span class="stat-num">12mo</span><span class="stat-label">Year-Round Supply</span></div>
 </div>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="about-grid">
-    <div class="about-img-wrap">
-      <svg class="farm-illustration" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-        <rect width="400" height="300" fill="#e8f5e9" rx="16"/>
-        <ellipse cx="200" cy="260" rx="200" ry="50" fill="#c8e6c9"/>
-        <rect x="30" y="200" width="60" height="60" fill="#a5d6a7" rx="4"/>
-        <rect x="20" y="180" width="80" height="25" fill="#81c784" rx="4"/>
-        <polygon points="60,120 20,180 100,180" fill="#66bb6a"/>
-        <rect x="170" y="160" width="80" height="100" fill="#a5d6a7" rx="4"/>
-        <rect x="155" y="140" width="110" height="30" fill="#81c784" rx="4"/>
-        <polygon points="210,70 155,140 265,140" fill="#66bb6a"/>
-        <rect x="210" y="210" width="12" height="50" fill="#8d6e63"/>
-        <rect x="300" y="220" width="60" height="40" fill="#a5d6a7" rx="4"/>
-        <rect x="290" y="200" width="80" height="25" fill="#81c784" rx="4"/>
-        <polygon points="330,150 290,200 370,200" fill="#66bb6a"/>
-        <circle cx="60" cy="100" r="35" fill="#a5d6a7"/>
-        <circle cx="40" cy="110" r="28" fill="#81c784"/>
-        <circle cx="75" cy="105" r="25" fill="#66bb6a"/>
-        <path d="M80 180 Q120 140 160 170 Q200 140 240 160 Q280 130 320 155" stroke="#4caf50" stroke-width="2.5" fill="none" stroke-dasharray="6,4"/>
-        <circle cx="200" cy="60" r="30" fill="#fff9c4"/>
-        <line x1="200" y1="30" x2="200" y2="10" stroke="#ffd54f" stroke-width="2"/>
-        <line x1="200" y1="90" x2="200" y2="110" stroke="#ffd54f" stroke-width="2"/>
-        <line x1="170" y1="60" x2="150" y2="60" stroke="#ffd54f" stroke-width="2"/>
-        <line x1="230" y1="60" x2="250" y2="60" stroke="#ffd54f" stroke-width="2"/>
-      </svg>
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <span class="section-tag">Farm Moments</span>
+  <h2 class="section-title">Gallery Slideshow</h2>
+  <p class="section-body">Upload your photos and videos to the gallery folders, add their paths in one file, and they will rotate here automatically.</p>
+  <div class="gallery-shell">
+    <div class="gallery-stage" id="galleryStage">
+      <div class="gallery-empty">Add media files to the gallery list to start the slideshow.</div>
+      <div class="gallery-controls" id="galleryControls" style="display:none;">
+        <button class="gallery-btn" id="galleryPrev" aria-label="Previous slide">&#10094;</button>
+        <button class="gallery-btn" id="galleryNext" aria-label="Next slide">&#10095;</button>
+      </div>
     </div>
-    <div>
-      <span class="section-tag">About Us</span>
-      <h2 class="section-title">Technology-Driven Farming Built for Long-Term Growth</h2>
-      <p class="section-body">Rethorium Farm is an innovative agricultural venture developed on a two-acre parcel of land with favourable topography, suitable climate conditions, and a rich soil profile. These strengths were assessed and validated by GeoPard Agriculture, confirming the land's strong capacity for sustainable and intensive farming operations over the long term.</p>
-      <br>
-      <p class="section-body">As part of the broader Rethorium Group platform, the farm is built to revolutionize agriculture through modern, intelligent, and technology-driven practices led by Nigerian youth. We combine practical agricultural frameworks with scalable, efficient, and data-informed farming methods to increase productivity while managing resources responsibly.</p>
-      <br>
-      <p class="section-body">Our focus is extensive crop production and greenhouse farming, allowing us to serve markets consistently while improving food availability, creating jobs, and contributing to economic growth across West Africa.</p>
-      <ul class="about-points">
-        <li>We are building a sustainable agribusiness model that combines innovation, youth empowerment, and strategic farm management.</li>
-        <li>Our mission is to address the long-standing neglect of agriculture by proving that smart farming can be profitable, scalable, and community-focused.</li>
-        <li>Rethorium Farm is positioned as a practical model for modern agribusiness with strong potential for long-term expansion.</li>
-      </ul>
-      <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Get in Touch</a>
+    <div class="gallery-caption" id="galleryCaption">No gallery media loaded yet.</div>
+    <div class="gallery-meta">
+      <div class="gallery-dotwrap" id="galleryDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <span class="section-tag">How We Serve You</span>
+  <h2 class="section-title">More Than Just a Farm</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div>
+        <h3>Direct Farm Delivery</h3>
+        <p>We deliver straight from our fields to homes, restaurants, and businesses — no middlemen, just fresh produce at fair prices.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div>
+        <h3>Wholesale Supply</h3>
+        <p>Consistent, bulk supply for retailers, hotels, and food processors. Reliable volumes, trusted quality, competitive pricing.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div>
+        <h3>Farm Subscription Boxes</h3>
+        <p>Weekly or monthly curated produce bundles delivered to your door — seasonal, surprising, and always spectacular.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div>
+        <h3>Farm Visits & Tours</h3>
+        <p>Bring your family or team for an unforgettable farm experience — learn how your food grows, harvest your own, eat fresh.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -638,59 +643,23 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-  <span class="section-tag">How We Serve You</span>
-  <h2 class="section-title">More Than Just a Farm</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-num">01</div>
-      <div>
-        <h3>Direct Farm Delivery</h3>
-        <p>We deliver straight from our fields to homes, restaurants, and businesses — no middlemen, just fresh produce at fair prices.</p>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-num">02</div>
-      <div>
-        <h3>Wholesale Supply</h3>
-        <p>Consistent, bulk supply for retailers, hotels, and food processors. Reliable volumes, trusted quality, competitive pricing.</p>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-num">03</div>
-      <div>
-        <h3>Farm Subscription Boxes</h3>
-        <p>Weekly or monthly curated produce bundles delivered to your door — seasonal, surprising, and always spectacular.</p>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-num">04</div>
-      <div>
-        <h3>Farm Visits & Tours</h3>
-        <p>Bring your family or team for an unforgettable farm experience — learn how your food grows, harvest your own, eat fresh.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section class="section" id="gallery">
-  <span class="section-tag">Farm Moments</span>
-  <h2 class="section-title">Gallery Slideshow</h2>
-  <p class="section-body">Upload your photos and videos to the gallery folders, add their paths in one file, and they will rotate here automatically.</p>
-  <div class="gallery-shell">
-    <div class="gallery-stage" id="galleryStage">
-      <div class="gallery-empty">Add media files to the gallery list to start the slideshow.</div>
-      <div class="gallery-controls" id="galleryControls" style="display:none;">
-        <button class="gallery-btn" id="galleryPrev" aria-label="Previous slide">&#10094;</button>
-        <button class="gallery-btn" id="galleryNext" aria-label="Next slide">&#10095;</button>
-      </div>
-    </div>
-    <div class="gallery-caption" id="galleryCaption">No gallery media loaded yet.</div>
-    <div class="gallery-meta">
-      <div class="gallery-count" id="galleryCount">0 / 0</div>
-      <div class="gallery-dotwrap" id="galleryDots"></div>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div>
+      <span class="section-tag">About Us</span>
+      <h2 class="section-title">Technology-Driven Farming Built for Long-Term Growth</h2>
+      <p class="section-body">Rethorium Farm is an innovative agricultural venture developed on a two-acre parcel of land with favourable topography, suitable climate conditions, and a rich soil profile. These strengths were assessed and validated by GeoPard Agriculture, confirming the land's strong capacity for sustainable and intensive farming operations over the long term.</p>
+      <br>
+      <p class="section-body">As part of the broader Rethorium Group platform, the farm is built to revolutionize agriculture through modern, intelligent, and technology-driven practices led by Nigerian youth. We combine practical agricultural frameworks with scalable, efficient, and data-informed farming methods to increase productivity while managing resources responsibly.</p>
+      <br>
+      <p class="section-body">Our focus is extensive crop production and greenhouse farming, allowing us to serve markets consistently while improving food availability, creating jobs, and contributing to economic growth across West Africa.</p>
+      <ul class="about-points">
+        <li>We are building a sustainable agribusiness model that combines innovation, youth empowerment, and strategic farm management.</li>
+        <li>Our mission is to address the long-standing neglect of agriculture by proving that smart farming can be profitable, scalable, and community-focused.</li>
+        <li>Rethorium Farm is positioned as a practical model for modern agribusiness with strong potential for long-term expansion.</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Get in Touch</a>
     </div>
   </div>
 </section>
@@ -702,32 +671,6 @@
     <h2 class="section-title">Contact Rethorium Farm</h2>
     <p>Reach us directly for produce enquiries, greenhouse farming opportunities, partnerships, and all other business discussions.</p>
     <div class="contact-layout">
-      <div class="contact-card">
-        <h3>Direct Contact</h3>
-        <p>We respond quickly on WhatsApp and by phone for orders, partnership discussions, and general enquiries.</p>
-        <div class="contact-list">
-          <div class="contact-item">
-            <span class="contact-label">Phone Number</span>
-            <a href="tel:+2348164770648">+234 816 477 0648</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">WhatsApp</span>
-            <a href="https://wa.me/+2348164770648" target="_blank" rel="noopener noreferrer">+234 816 477 0648</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            <a href="mailto:info@rethoriumfarm.com">info@rethoriumfarm.com</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Location</span>
-            <span>Nigeria, serving agricultural markets across West Africa</span>
-          </div>
-        </div>
-        <a class="whatsapp-btn" href="https://wa.me/+2348164770648" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.23c-.27-.13-1.57-.77-1.82-.86-.24-.09-.42-.13-.6.13-.18.27-.69.86-.85 1.04-.15.18-.31.2-.58.07-.27-.13-1.12-.41-2.13-1.3-.79-.7-1.32-1.57-1.48-1.84-.15-.27-.02-.41.11-.54.12-.12.27-.31.4-.47.13-.15.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.6-1.45-.82-1.99-.22-.52-.45-.45-.6-.45h-.51c-.18 0-.47.07-.72.34-.24.27-.94.92-.94 2.24 0 1.33.96 2.61 1.09 2.79.13.18 1.89 2.88 4.57 4.04.64.27 1.14.43 1.53.55.64.2 1.22.17 1.68.1.51-.08 1.57-.64 1.79-1.25.22-.61.22-1.13.15-1.25-.06-.12-.24-.18-.51-.31Z"/><path d="M27.27 4.68A15.78 15.78 0 0 0 16.02 0C7.3 0 .2 7.1.2 15.82c0 2.79.73 5.51 2.12 7.91L0 32l8.5-2.23a15.8 15.8 0 0 0 7.52 1.91h.01c8.72 0 15.82-7.1 15.82-15.82 0-4.22-1.64-8.19-4.58-11.18Zm-11.24 24.3h-.01a13.2 13.2 0 0 1-6.72-1.84l-.48-.29-5.04 1.32 1.35-4.91-.31-.5a13.16 13.16 0 0 1-2.03-6.95c0-7.27 5.92-13.19 13.2-13.19 3.52 0 6.83 1.37 9.32 3.87a13.1 13.1 0 0 1 3.86 9.32c0 7.28-5.92 13.2-13.14 13.2Z"/></svg>
-          Chat on WhatsApp
-        </a>
-      </div>
       <div class="contact-form-shell">
         <h3>Send a Message</h3>
         <div class="contact-form">
@@ -743,6 +686,22 @@
           <button class="submit-btn" onclick="alert('Thank you! We will get back to you shortly.')">Send Message</button>
         </div>
       </div>
+      <div class="contact-card">
+        <h3>Direct Contact</h3>
+        <p>We respond quickly on WhatsApp and by phone for orders, partnership discussions, and general enquiries.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-label">Phone Number</span>
+            <a href="tel:+2348164770648">+234 816 477 0648</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:info@rethoriumfarm.com">info@rethoriumfarm.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Location</span>
+            <span>Nigeria, serving agricultural markets across West Africa</span>
+          </div>
     </div>
   </div>
 </section>
@@ -771,7 +730,6 @@
     const mediaList = Array.isArray(window.galleryMedia) ? window.galleryMedia : [];
     const stage = document.getElementById('galleryStage');
     const captionEl = document.getElementById('galleryCaption');
-    const countEl = document.getElementById('galleryCount');
     const dotsWrap = document.getElementById('galleryDots');
     const controls = document.getElementById('galleryControls');
     const prevBtn = document.getElementById('galleryPrev');
@@ -828,7 +786,6 @@
       }
 
       captionEl.textContent = item.caption || 'Farm gallery media';
-      countEl.textContent = (currentIndex + 1) + ' / ' + mediaList.length;
       renderDots();
     }
 
