@@ -23,11 +23,14 @@
 <meta name="twitter:title" content="Rethorium Farm">
 <meta name="twitter:description" content="Fresh farm produce, greenhouse farming, and sustainable agriculture.">
 <meta name="twitter:image" content="https://rethoriumfarm.com/Rethorium%20Logo.jpg">
+<meta name="theme-color" content="#1a3d1f">
 <link rel="canonical" href="https://rethoriumfarm.com">
 <link rel="alternate" hreflang="en-ng" href="https://rethoriumfarm.com">
 <link rel="alternate" hreflang="x-default" href="https://rethoriumfarm.com">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<link rel="mask-icon" href="favicon.svg" color="#2d6a35">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -58,11 +61,15 @@
   }
   .nav-logo { display: flex; align-items: center; gap: 10px; }
   .nav-logo-icon {
-    width: 76px; height: 76px; background: var(--green-mid);
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    width: 76px; height: 76px;
+    border-radius: 24px; display: flex; align-items: center; justify-content: center;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.98), rgba(232,245,233,0.92) 70%, rgba(168,213,162,0.75) 100%);
+    border: 1px solid rgba(45,106,53,0.14);
+    box-shadow: 0 10px 24px rgba(26,61,31,0.12);
+    padding: 0.55rem;
     overflow: hidden;
   }
-  .nav-logo-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .nav-logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.08rem; font-weight: 700; color: var(--green-deep); letter-spacing: 0.03em; }
   .nav-links { display: flex; align-items: center; gap: 2rem; }
   .nav-links a { font-size: 0.9rem; color: var(--text-mid); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
@@ -435,7 +442,7 @@
       gap: 0.7rem;
       min-width: 0;
     }
-    .nav-logo-icon { width: 54px; height: 54px; }
+    .nav-logo-icon { width: 54px; height: 54px; padding: 0.4rem; }
     .nav-brand {
       display: inline-block;
       font-size: 0.86rem;
@@ -623,8 +630,8 @@
       "name": "Rethorium Farm",
       "alternateName": "Rethorium Farm Nigeria",
       "url": "https://rethoriumfarm.com",
-      "logo": "https://rethoriumfarm.com/Rethorium%20Logo.jpg",
-      "image": "https://rethoriumfarm.com/Rethorium%20Logo.jpg",
+      "logo": "https://rethoriumfarm.com/rethorium-logo.svg",
+      "image": "https://rethoriumfarm.com/rethorium-logo.svg",
       "description": "Rethorium Farm is a modern agricultural company in Nigeria focused on sustainable crop production, greenhouse farming, and fresh organic produce supply across West Africa.",
       "email": "info@rethoriumfarm.com",
       "telephone": "+2348164770648",
@@ -678,7 +685,7 @@
 <nav>
   <div class="nav-logo">
     <div class="nav-logo-icon">
-      <img src="Rethorium Logo.jpg" alt="Rethorium Farm logo">
+      <img src="rethorium-mark.svg" alt="Rethorium Farm mark">
     </div>
     <span class="nav-brand">RETHORIUM FARM</span>
   </div>
