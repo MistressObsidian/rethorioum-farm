@@ -1,7 +1,7 @@
 window.galleryMedia = [
   {
-    "src": "gallery/images/harvest-2026-04/harvest-8.jpeg",
-    "caption": "Members of the team discussing field activity."
+    "src": "gallery/images/harvest-2026-04/harvest-33.jpeg",
+    "caption": "The team discussing work across the farm."
   },
   {
     "src": "gallery/images/harvest-2026-04/harvest-32.jpeg",
@@ -36,24 +36,12 @@ window.galleryMedia = [
     "caption": "Walking the farm to review the fields."
   },
   {
-    "src": "gallery/images/harvest-2026-04/harvest-24.jpeg",
-    "caption": "A conversation beside the crop beds."
-  },
-  {
     "src": "gallery/images/harvest-2026-04/harvest-25.jpeg",
     "caption": "A view across the farm's open ground."
   },
   {
-    "src": "gallery/images/harvest-2026-04/harvest-29.jpeg",
-    "caption": "Watering crops growing in the field."
-  },
-  {
     "src": "gallery/images/harvest-2026-04/harvest-31.jpeg",
     "caption": "The team watering and tending the crops."
-  },
-  {
-    "src": "gallery/images/harvest-2026-04/harvest-33.jpeg",
-    "caption": "The team discussing work across the farm."
   },
   {
     "src": "gallery/images/harvest-2026-04/harvest-34.jpeg",
@@ -62,9 +50,5 @@ window.galleryMedia = [
   {
     "src": "gallery/images/harvest-2026-04/harvest-35.jpeg",
     "caption": "A water pump and hoses used on the farm."
-  },
-  {
-    "src": "gallery/images/harvest-2026-04/harvest-36.jpeg",
-    "caption": "A quiet moment among the farm's trees."
   }
 ];

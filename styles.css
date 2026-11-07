@@ -513,7 +513,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   color:var(--muted)
 }
 .gallery-section {
-  background:#f0f2e8
+  background:#f7f8f2
 }
 .gallery-layout {
   display:grid;
@@ -543,14 +543,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   color:var(--ink)
 }
 .gallery-button:hover {
-  background:#dfe7d9
+  background:#eef1e8
 }
 .gallery-toggle {
   padding:10px 16px;
   font-size:.78rem
 }
 .gallery-stage {
-  background:#dce3d3;
+  background:#edf0e7;
   border-radius:10px;
   overflow:hidden;
   aspect-ratio:5/4;
