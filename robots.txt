@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rethoriumfarm.com/sitemap.xml
+Sitemap: https://rethorioum-farm.pages.dev/sitemap.xml

@@ -1,11 +1,13 @@
 # BIMI Setup
 
-Use the prepared logo file at `https://rethoriumfarm.com/bimi.svg` for BIMI publication.
+Use the prepared logo file at `https://rethorioum-farm.pages.dev/bimi.svg` for BIMI publication.
+
+The website currently uses the Cloudflare Pages address above. The DNS example below applies to the custom email domain when it is activated.
 
 Recommended DNS record:
 
 ```txt
-default._bimi.rethoriumfarm.com IN TXT "v=BIMI1; l=https://rethoriumfarm.com/bimi.svg; a="
+default._bimi.rethoriumfarm.com IN TXT "v=BIMI1; l=https://rethorioum-farm.pages.dev/bimi.svg; a="
 ```
 
 Requirements before BIMI will display in supported inboxes:

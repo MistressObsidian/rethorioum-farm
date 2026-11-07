@@ -14,21 +14,20 @@
 <meta name="geo.placename" content="Nigeria">
 <meta property="og:title" content="Rethorium Farm">
 <meta property="og:description" content="Fresh, sustainable farming and organic produce from Rethorium Farm.">
-<meta property="og:image" content="https://rethoriumfarm.com/Rethorium%20Logo.jpg">
-<meta property="og:url" content="https://rethoriumfarm.com">
+<meta property="og:image" content="https://rethorioum-farm.pages.dev/Rethorium%20Logo.jpg">
+<meta property="og:url" content="https://rethorioum-farm.pages.dev">
 <meta property="og:site_name" content="Rethorium Farm">
 <meta property="og:locale" content="en_NG">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rethorium Farm">
 <meta name="twitter:description" content="Fresh farm produce, greenhouse farming, and sustainable agriculture.">
-<meta name="twitter:image" content="https://rethoriumfarm.com/Rethorium%20Logo.jpg">
+<meta name="twitter:image" content="https://rethorioum-farm.pages.dev/Rethorium%20Logo.jpg">
 <meta name="theme-color" content="#1a3d1f">
-<link rel="canonical" href="https://rethoriumfarm.com">
-<link rel="alternate" hreflang="en-ng" href="https://rethoriumfarm.com">
-<link rel="alternate" hreflang="x-default" href="https://rethoriumfarm.com">
+<link rel="canonical" href="https://rethorioum-farm.pages.dev">
+<link rel="alternate" hreflang="en-ng" href="https://rethorioum-farm.pages.dev">
+<link rel="alternate" hreflang="x-default" href="https://rethorioum-farm.pages.dev">
 <link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="mask-icon" href="favicon.svg" color="#2d6a35">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -290,16 +289,14 @@
     text-align: left;
     align-items: start;
   }
-  .contact-card,
-  .contact-form-shell {
+  .contact-card {
     background: rgba(255,255,255,0.82);
     border: 1px solid rgba(76,175,80,0.18);
     border-radius: 22px;
     padding: 2rem;
     box-shadow: 0 18px 45px rgba(26,61,31,0.08);
   }
-  .contact-card h3,
-  .contact-form-shell h3 {
+  .contact-card h3 {
     font-family: 'Playfair Display', serif;
     color: var(--green-deep);
     font-size: 1.35rem;
@@ -325,12 +322,12 @@
     margin-bottom: 0.35rem;
     font-weight: 500;
   }
-  .contact-item a,
-  .contact-item span {
+  .contact-item a {
     color: var(--text-dark);
     text-decoration: none;
     font-size: 0.98rem;
     line-height: 1.5;
+    overflow-wrap: anywhere;
   }
   .contact-item a:hover { color: var(--green-mid); }
   .whatsapp-btn {
@@ -373,25 +370,6 @@
     box-shadow: 0 22px 44px rgba(37,211,102,0.42);
   }
   .whatsapp-float svg { width: 28px; height: 28px; }
-  .contact-form { text-align: left; display: grid; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.35rem; }
-  .form-group label { font-size: 0.82rem; font-weight: 500; color: var(--text-mid); }
-  .form-group input, .form-group textarea, .form-group select {
-    padding: 0.75rem 1rem; border: 1px solid rgba(76,175,80,0.25);
-    border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-    background: white; color: var(--text-dark); outline: none; transition: border 0.2s;
-    resize: none;
-  }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-    border-color: var(--green-bright);
-  }
-  .submit-btn {
-    background: var(--green-mid); color: white; border: none; padding: 0.9rem 2rem;
-    border-radius: 50px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
-    font-weight: 500; cursor: pointer; transition: all 0.2s; width: 100%;
-  }
-  .submit-btn:hover { background: var(--green-deep); transform: translateY(-1px); }
 
   /* FOOTER */
   footer {
@@ -516,8 +494,7 @@
     .about-grid,
     .products-grid,
     .services-grid,
-    .contact-layout,
-    .form-row { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; }
     .products-grid,
     .services-grid {
       gap: 1rem;
@@ -560,21 +537,11 @@
       font-size: 0.95rem;
       margin-bottom: 1.5rem;
     }
-    .contact-form-shell {
+    .contact-card {
       padding: 1.25rem;
       border-radius: 18px;
     }
-    .contact-form-shell h3 { font-size: 1.15rem; }
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      font-size: 0.95rem;
-      padding: 0.8rem 0.9rem;
-    }
-    .submit-btn {
-      padding: 0.85rem 1rem;
-      font-size: 0.92rem;
-    }
+    .contact-card h3 { font-size: 1.15rem; }
     footer {
       padding: 2rem 1rem 1.35rem;
       justify-content: center;
@@ -626,14 +593,13 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://rethoriumfarm.com/#organization",
+      "@id": "https://rethorioum-farm.pages.dev/#organization",
       "name": "Rethorium Farm",
       "alternateName": "Rethorium Farm Nigeria",
-      "url": "https://rethoriumfarm.com",
-      "logo": "https://rethoriumfarm.com/rethorium-logo.svg",
-      "image": "https://rethoriumfarm.com/rethorium-logo.svg",
+      "url": "https://rethorioum-farm.pages.dev",
+      "logo": "https://rethorioum-farm.pages.dev/rethorium-logo.svg",
+      "image": "https://rethorioum-farm.pages.dev/rethorium-logo.svg",
       "description": "Rethorium Farm is a modern agricultural company in Nigeria focused on sustainable crop production, greenhouse farming, and fresh organic produce supply across West Africa.",
-      "email": "info@rethoriumfarm.com",
       "telephone": "+2348164770648",
       "foundingDate": "2024",
       "areaServed": {
@@ -644,7 +610,6 @@
         "@type": "ContactPoint",
         "contactType": "customer service",
         "telephone": "+2348164770648",
-        "email": "info@rethoriumfarm.com",
         "availableLanguage": "English"
       },
       "sameAs": [
@@ -653,24 +618,24 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://rethoriumfarm.com/#website",
-      "url": "https://rethoriumfarm.com",
+      "@id": "https://rethorioum-farm.pages.dev/#website",
+      "url": "https://rethorioum-farm.pages.dev",
       "name": "Rethorium Farm",
       "publisher": {
-        "@id": "https://rethoriumfarm.com/#organization"
+        "@id": "https://rethorioum-farm.pages.dev/#organization"
       },
       "inLanguage": "en-NG"
     },
     {
       "@type": "WebPage",
-      "@id": "https://rethoriumfarm.com/#webpage",
-      "url": "https://rethoriumfarm.com",
+      "@id": "https://rethorioum-farm.pages.dev/#webpage",
+      "url": "https://rethorioum-farm.pages.dev",
       "name": "Rethorium Farm | Organic Farming, Greenhouse Agriculture & Fresh Produce in Nigeria",
       "isPartOf": {
-        "@id": "https://rethoriumfarm.com/#website"
+        "@id": "https://rethorioum-farm.pages.dev/#website"
       },
       "about": {
-        "@id": "https://rethoriumfarm.com/#organization"
+        "@id": "https://rethorioum-farm.pages.dev/#organization"
       },
       "description": "Rethorium Farm is a modern agricultural company in Nigeria focused on sustainable crop production, greenhouse farming, and fresh organic produce supply across West Africa.",
       "inLanguage": "en-NG"
@@ -860,25 +825,21 @@
     <h2 class="section-title">Contact Rethorium Farm</h2>
     <p>Reach us directly for produce enquiries, greenhouse farming opportunities, partnerships, and all other business discussions.</p>
     <div class="contact-layout">
-      <div class="contact-form-shell">
-        <h3>Send a Message</h3>
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe"></div>
+      <div class="contact-card">
+        <h3>Contact Us Directly</h3>
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="contact-label">Call</span>
+            <a href="tel:+2348164770648">+234 816 477 0648</a>
           </div>
-          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@example.com"></div>
-          <div class="form-group"><label>I'm interested in</label>
-            <select><option>Crop Production</option><option>Greenhouse Farming</option><option>Wholesale Order</option><option>Partnership Opportunity</option><option>General Enquiry</option></select>
-          </div>
-          <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Tell us what you need..."></textarea></div>
-          <button class="submit-btn" onclick="alert('Thank you! We will get back to you shortly.')">Send Message</button>
         </div>
+        <a class="whatsapp-btn" href="https://wa.me/2348164770648" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+      </div>
     </div>
   </div>
 </section>
 
-<a class="whatsapp-float" href="https://wa.me/+2348164770648" target="_blank" rel="noopener noreferrer" aria-label="Chat with Rethorium Farm on WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/2348164770648" target="_blank" rel="noopener noreferrer" aria-label="Chat with Rethorium Farm on WhatsApp">
   <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.23c-.27-.13-1.57-.77-1.82-.86-.24-.09-.42-.13-.6.13-.18.27-.69.86-.85 1.04-.15.18-.31.2-.58.07-.27-.13-1.12-.41-2.13-1.3-.79-.7-1.32-1.57-1.48-1.84-.15-.27-.02-.41.11-.54.12-.12.27-.31.4-.47.13-.15.18-.27.27-.45.09-.18.04-.34-.02-.47-.07-.13-.6-1.45-.82-1.99-.22-.52-.45-.45-.6-.45h-.51c-.18 0-.47.07-.72.34-.24.27-.94.92-.94 2.24 0 1.33.96 2.61 1.09 2.79.13.18 1.89 2.88 4.57 4.04.64.27 1.14.43 1.53.55.64.2 1.22.17 1.68.1.51-.08 1.57-.64 1.79-1.25.22-.61.22-1.13.15-1.25-.06-.12-.24-.18-.51-.31Z"/><path d="M27.27 4.68A15.78 15.78 0 0 0 16.02 0C7.3 0 .2 7.1.2 15.82c0 2.79.73 5.51 2.12 7.91L0 32l8.5-2.23a15.8 15.8 0 0 0 7.52 1.91h.01c8.72 0 15.82-7.1 15.82-15.82 0-4.22-1.64-8.19-4.58-11.18Zm-11.24 24.3h-.01a13.2 13.2 0 0 1-6.72-1.84l-.48-.29-5.04 1.32 1.35-4.91-.31-.5a13.16 13.16 0 0 1-2.03-6.95c0-7.27 5.92-13.19 13.2-13.19 3.52 0 6.83 1.37 9.32 3.87a13.1 13.1 0 0 1 3.86 9.32c0 7.28-5.92 13.2-13.14 13.2Z"/></svg>
 </a>
 
@@ -897,10 +858,6 @@
     <a class="footer-contact-link" href="tel:+2348164770648" aria-label="Call Rethorium Farm">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 3.5a1 1 0 0 1 1-1H7.5a1 1 0 0 1 1 1c0 1.2.19 2.38.56 3.5a1 1 0 0 1-.24 1.02l-2.2 2.77Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>Call</span>
-    </a>
-    <a class="footer-contact-link" href="mailto:info@rethoriumfarm.com" aria-label="Email Rethorium Farm">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5h16a1.5 1.5 0 0 1 1.5 1.5v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Z" stroke="currentColor" stroke-width="1.8"/><path d="m4 8 8 5 8-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Email</span>
     </a>
   </div>
   <div class="footer-copy">© 2023 Rethorium Farm. All rights reserved. Grown with love, delivered with care.</div>
