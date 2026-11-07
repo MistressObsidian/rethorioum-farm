@@ -1,5 +1,7 @@
 export async function onRequest(context) {
-  const path = new URL(context.request.url).pathname;
+  let path;
+  try { path = decodeURIComponent(new URL(context.request.url).pathname).replace(/\/{2,}/g,'/'); }
+  catch { return new Response('Invalid path', {status:400}); }
   if (path.split('/').some(part => part.startsWith('.')) || /^\/(backend|tests|scripts)(\/|$)/.test(path) || /\.(md|sql|jsonc|toml|log)$/i.test(path)) return new Response('Not found', {status:404});
   const response = await context.next();
   const headers = new Headers(response.headers);

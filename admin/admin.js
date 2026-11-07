@@ -27,7 +27,7 @@
       const title = document.createElement('h3'); title.textContent = meta.name;
       const fields = document.createElement('div'); fields.className = 'form-grid';
       const priceLabel = document.createElement('label'); priceLabel.className = 'field'; priceLabel.textContent = 'Price (NGN)';
-      const price = document.createElement('input'); price.type='number'; price.min='0.01'; price.max='10000000'; price.step='0.01'; price.placeholder='Leave blank for quote'; price.inputMode='decimal'; price.name='price'; price.value=product.price ?? ''; priceLabel.append(price);
+      const price = document.createElement('input'); price.type='number'; price.min='0.01'; price.max='10000000'; price.step='0.01'; price.placeholder='Request price'; price.inputMode='decimal'; price.name='price'; price.value=product.price ?? ''; priceLabel.append(price);
       const unitLabel = document.createElement('label'); unitLabel.className = 'field'; unitLabel.textContent='Price per'; const unit = document.createElement('select'); unit.name='unit';
       for (const [value,label] of [['kg','Kilogram (kg)'],['bag','Bag'],['crate','Crate'],['box','Box']]) { const option = document.createElement('option'); option.value=value; option.textContent=label; unit.append(option); } unit.value=product.unit; unitLabel.append(unit); fields.append(priceLabel,unitLabel);
       const availabilityLabel = document.createElement('label'); availabilityLabel.className='field'; availabilityLabel.textContent='Availability'; const availability=document.createElement('select'); availability.name='availability';
