@@ -1,7 +1,7 @@
 window.farmData = {
   phone: '2348164770648',
   products: [
-    { id: 'roots', name: 'Roots & tubers', description: 'Ask about root crops, the next harvest and the quantity you need.', image: 'gallery/images/harvest-2026-04/harvest-10.jpeg', alt: 'Harvested root crops being inspected at the farm', icon: 'roots', unit: 'kg', price: null, availability: 'enquiry' },
+    { id: 'roots', name: 'Roots & tubers', description: 'Ask about root crops, the next harvest and the quantity you need.', image: 'gallery/images/harvest-2026-04/harvest-4.jpeg', alt: 'Freshly harvested root crops held in a hand', icon: 'roots', unit: 'kg', price: null, availability: 'enquiry' },
     { id: 'leafy', name: 'Leafy vegetables', description: 'Check which leafy crops are available for your kitchen or business.', icon: 'leaf', unit: 'kg', price: null, availability: 'enquiry' },
     { id: 'grains', name: 'Grains & legumes', description: 'Discuss crop choices, quantities and supply requirements with our team.', icon: 'grain', unit: 'kg', price: null, availability: 'enquiry' },
     { id: 'fruits', name: 'Seasonal fruits', description: 'Find out about seasonal fruit availability and upcoming harvests.', icon: 'fruit', unit: 'kg', price: null, availability: 'enquiry' },
