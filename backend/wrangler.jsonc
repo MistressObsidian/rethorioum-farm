@@ -1,0 +1,18 @@
+{
+  "name": "rethorium-farm-catalogue",
+  "main": "worker.mjs",
+  "account_id": "a87fd7ffadce4d37155bc6db21b22d0d",
+  "compatibility_date": "2026-11-07",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "head_sampling_rate": 1 },
+    "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "rethorium-farm-catalogue",
+    "database_id": "e914d5fb-0803-405e-9ee0-c2e446dc2d9c",
+    "migrations_dir": "migrations"
+  }]
+}

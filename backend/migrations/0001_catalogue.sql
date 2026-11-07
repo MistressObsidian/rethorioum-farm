@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS products (id TEXT PRIMARY KEY, price_cents INTEGER CHECK (price_cents IS NULL OR price_cents > 0), unit TEXT NOT NULL CHECK(unit IN ('kg','bag','crate','box')), availability TEXT NOT NULL DEFAULT 'enquiry' CHECK(availability IN ('enquiry','available','unavailable')), version INTEGER NOT NULL DEFAULT 1, updated_at TEXT);
+INSERT OR IGNORE INTO products(id,price_cents,unit,availability) VALUES ('roots',NULL,'kg','enquiry'),('leafy',NULL,'kg','enquiry'),('grains',NULL,'kg','enquiry'),('fruits',NULL,'kg','enquiry'),('herbs',NULL,'kg','enquiry'),('bulk',NULL,'bag','enquiry');
+CREATE TABLE IF NOT EXISTS settings (id INTEGER PRIMARY KEY CHECK(id = 1), delivery TEXT NOT NULL, collection TEXT NOT NULL, minimum TEXT NOT NULL, version INTEGER NOT NULL DEFAULT 1);
+INSERT OR IGNORE INTO settings(id,delivery,collection,minimum) VALUES (1,'Share your town or area. We will confirm whether delivery is available, the delivery fee and a suitable date.','Ask the team to confirm the collection location and pickup window before travelling.','Minimum quantities depend on the crop and order size. Request a quote for your requirements.');
+CREATE TABLE IF NOT EXISTS sessions (token_hash TEXT PRIMARY KEY, expires INTEGER NOT NULL);
+CREATE INDEX IF NOT EXISTS sessions_expiry ON sessions(expires);
+CREATE TABLE IF NOT EXISTS login_attempts (bucket TEXT PRIMARY KEY, failures INTEGER NOT NULL, expires INTEGER NOT NULL);

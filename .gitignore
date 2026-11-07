@@ -1,0 +1,7 @@
+.wrangler/
+backend/.wrangler/
+node_modules/
+.dev.vars*
+.env*
+.admin-access.txt
+test-results/
